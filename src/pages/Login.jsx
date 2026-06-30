@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 export default function Login() {
   const { login, cargando } = useAuth();
-  const navigate = useNavigate();
   const [form, setForm] = useState({ correo: '', contrasena: '' });
   const [error, setError] = useState('');
   const [mostrar, setMostrar] = useState(false);
